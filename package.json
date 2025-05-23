@@ -13,9 +13,14 @@
     "sequelize:dev": "cross-env PORT=3001 nodemon sequelize/app.js",
     "sequelize:migrate": "cd sequelize && npx sequelize-cli db:migrate",
     "sequelize:seed": "cd sequelize && npx sequelize-cli db:seed:all",
+
+	"mongoose": "cross-env PORT=3002 node mongoose/app.js",
+    "mongoose:dev": "cross-env PORT=3002 nodemon mongoose/app.js",
+    "mongoose:seed": "node mongoose/seeds/userSeeds.js",
     
     "extract": "node scripts/extract-template.js",
     "extract:sequelize": "node scripts/extract-template.js sequelize",
+	"extract:mongoose": "node scripts/extract-template.js mongoose",
     "extract:all": "node scripts/extract-all.js"
   },
   "dependencies": {
@@ -29,7 +34,9 @@
     "mysql2": "^3.6.0",
     "pg": "^8.11.3",
     "sqlite3": "^5.1.6",
-    "sequelize-cli": "^6.6.1"
+    "sequelize-cli": "^6.6.1",
+
+	"mongoose": "^7.5.0"
   },
   "devDependencies": {
     "typescript": "^5.1.6",
