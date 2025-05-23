@@ -27,6 +27,11 @@
     "prisma:migrate": "cd prisma && npx prisma db push",
     "prisma:seed": "cd prisma && node prisma/seed.js",
 
+	"knex": "cross-env PORT=3005 node knex/app.js",
+    "knex:dev": "cross-env PORT=3005 nodemon knex/app.js",
+    "knex:migrate": "cd knex && npx knex migrate:latest",
+    "knex:seed": "cd knex && npx knex seed:run",
+
     "extract": "node scripts/extract-template.js",
     "extract:sequelize": "node scripts/extract-template.js sequelize",
     "extract:mongoose": "node scripts/extract-template.js mongoose",
@@ -49,7 +54,9 @@
     "sqlite3": "^5.1.6",
     "typeorm": "^0.3.24",
 	"@prisma/client": "^5.2.0",
-    "prisma": "^5.2.0"
+    "prisma": "^5.2.0",
+	"knex": "^2.5.1",
+    "objection": "^3.1.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
