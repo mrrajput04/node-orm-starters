@@ -12,6 +12,38 @@ A complete, feature-rich collection of ORM starter templates with extraction cap
 - **Type Safety**: Full TypeScript support where applicable
 - **Production Ready**: Includes security, logging, and best practices
 
+## ✨ What's Included
+Each starter template comes with:
+
+🔧 Production-ready setup with proper project structure
+🛡️ Comprehensive error handling and validation
+⚙️ Environment variable configuration with .env support
+📝 Database migrations and seeders (where applicable)
+🏗️ Best practices for database connections and queries
+📚 Clear documentation and usage examples
+🧪 Basic testing setup for database operations
+
+## 🏃‍♂️ Quick Start
+
+Choose your preferred ORM template
+Copy the template to your project directory
+Run the installation commands provided in each template's README
+Configure your database credentials in the .env file
+Start building your API server immediately
+
+Perfect for developers who want to skip the boilerplate setup and focus on building features. Whether you're working with SQL databases, MongoDB, or need TypeScript support, there's a template ready for your next project.
+
+## 🎯 Use Cases
+
+Rapid prototyping and MVP development
+Learning different ORM patterns and approaches
+Starting new microservices with consistent database patterns
+Comparing ORM performance and developer experience
+Educational purposes and team onboarding
+
+
+Stop spending time on database setup and start building your application logic faster.
+
 ## 🚀 Quick Start
 
 1. **Clone and Setup**
