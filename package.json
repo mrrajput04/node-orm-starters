@@ -19,9 +19,19 @@
     "typeorm:dev": "cross-env PORT=3003 ts-node --watch typeorm/src/app.ts",
     "typeorm:migrate": "cd typeorm && npx typeorm migration:run",
     "typeorm:seed": "cd typeorm && ts-node src/seeds/UserSeeder.ts",
+
+
+	"prisma": "cross-env PORT=3004 node prisma/app.js",
+    "prisma:dev": "cross-env PORT=3004 nodemon prisma/app.js",
+    "prisma:generate": "cd prisma && npx prisma generate",
+    "prisma:migrate": "cd prisma && npx prisma db push",
+    "prisma:seed": "cd prisma && node prisma/seed.js",
+
     "extract": "node scripts/extract-template.js",
     "extract:sequelize": "node scripts/extract-template.js sequelize",
     "extract:mongoose": "node scripts/extract-template.js mongoose",
+    "extract:typeorm": "node scripts/extract-template.js typeorm",
+    "extract:prisma": "node scripts/extract-template.js prisma",
     "extract:all": "node scripts/extract-all.js"
   },
   "dependencies": {
@@ -37,7 +47,9 @@
     "sequelize": "^6.32.1",
     "sequelize-cli": "^6.6.1",
     "sqlite3": "^5.1.6",
-    "typeorm": "^0.3.24"
+    "typeorm": "^0.3.24",
+	"@prisma/client": "^5.2.0",
+    "prisma": "^5.2.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
@@ -51,6 +63,7 @@
     "inquirer": "^9.2.10",
     "nodemon": "^3.0.1",
     "ora": "^5.4.1",
+    "prisma": "^6.8.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
