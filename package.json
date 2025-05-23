@@ -8,76 +8,95 @@
     "setup": "node scripts/setup.js",
     "test-all": "node scripts/test-all.js",
     "seed-all": "node scripts/seed-all.js",
+    
     "sequelize": "cross-env PORT=3001 node sequelize/app.js",
     "sequelize:dev": "cross-env PORT=3001 nodemon sequelize/app.js",
     "sequelize:migrate": "cd sequelize && npx sequelize-cli db:migrate",
     "sequelize:seed": "cd sequelize && npx sequelize-cli db:seed:all",
+    
     "mongoose": "cross-env PORT=3002 node mongoose/app.js",
     "mongoose:dev": "cross-env PORT=3002 nodemon mongoose/app.js",
     "mongoose:seed": "node mongoose/seeds/userSeeds.js",
+    
     "typeorm": "cross-env PORT=3003 ts-node typeorm/src/app.ts",
     "typeorm:dev": "cross-env PORT=3003 ts-node --watch typeorm/src/app.ts",
     "typeorm:migrate": "cd typeorm && npx typeorm migration:run",
     "typeorm:seed": "cd typeorm && ts-node src/seeds/UserSeeder.ts",
-
-
-	"prisma": "cross-env PORT=3004 node prisma/app.js",
+    
+    "prisma": "cross-env PORT=3004 node prisma/app.js",
     "prisma:dev": "cross-env PORT=3004 nodemon prisma/app.js",
     "prisma:generate": "cd prisma && npx prisma generate",
     "prisma:migrate": "cd prisma && npx prisma db push",
     "prisma:seed": "cd prisma && node prisma/seed.js",
-
-	"knex": "cross-env PORT=3005 node knex/app.js",
+    
+    "knex": "cross-env PORT=3005 node knex/app.js",
     "knex:dev": "cross-env PORT=3005 nodemon knex/app.js",
     "knex:migrate": "cd knex && npx knex migrate:latest",
     "knex:seed": "cd knex && npx knex seed:run",
-
-	 "objection": "cross-env PORT=3006 node objection/app.js",
+    
+    "objection": "cross-env PORT=3006 node objection/app.js",
     "objection:dev": "cross-env PORT=3006 nodemon objection/app.js",
     "objection:migrate": "cd objection && npx knex migrate:latest",
     "objection:seed": "cd objection && npx knex seed:run",
-
+    
+    "mikroorm": "cross-env PORT=3007 ts-node mikroorm/src/app.ts",
+    "mikroorm:dev": "cross-env PORT=3007 ts-node --watch mikroorm/src/app.ts",
+    "mikroorm:seed": "cd mikroorm && ts-node src/seeders/UserSeeder.ts",
+    
     "extract": "node scripts/extract-template.js",
     "extract:sequelize": "node scripts/extract-template.js sequelize",
     "extract:mongoose": "node scripts/extract-template.js mongoose",
     "extract:typeorm": "node scripts/extract-template.js typeorm",
     "extract:prisma": "node scripts/extract-template.js prisma",
+    "extract:knex": "node scripts/extract-template.js knex",
+    "extract:objection": "node scripts/extract-template.js objection",
+    "extract:mikroorm": "node scripts/extract-template.js mikroorm",
     "extract:all": "node scripts/extract-all.js"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
     "helmet": "^7.0.0",
-    "mongoose": "^7.5.0",
     "morgan": "^1.10.0",
-    "mysql2": "^3.14.1",
-    "pg": "^8.11.3",
-    "reflect-metadata": "^0.1.14",
+    
     "sequelize": "^6.32.1",
-    "sequelize-cli": "^6.6.1",
+    "mysql2": "^3.6.0",
+    "pg": "^8.11.3",
     "sqlite3": "^5.1.6",
-    "typeorm": "^0.3.24",
-	"@prisma/client": "^5.2.0",
+    "sequelize-cli": "^6.6.1",
+    
+    "mongoose": "^7.5.0",
+    
+    "typeorm": "^0.3.17",
+    "reflect-metadata": "^0.1.13",
+    
+    "@prisma/client": "^5.2.0",
     "prisma": "^5.2.0",
-	"knex": "^2.5.1",
-    "objection": "^3.1.1"
+    
+    "knex": "^2.5.1",
+    "objection": "^3.1.1",
+    
+    "@mikro-orm/core": "^5.8.0",
+    "@mikro-orm/mysql": "^5.8.0",
+    "@mikro-orm/postgresql": "^5.8.0",
+    "@mikro-orm/sqlite": "^5.8.0",
+    "@mikro-orm/reflection": "^5.8.0"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.13",
+    "typescript": "^5.1.6",
+    "@types/node": "^20.5.0",
     "@types/express": "^4.17.17",
+    "@types/cors": "^2.8.13",
     "@types/morgan": "^1.9.5",
-    "@types/node": "^20.17.50",
-    "chalk": "^4.1.2",
-    "concurrently": "^8.2.0",
+    "ts-node": "^10.9.1",
+    "nodemon": "^3.0.1",
     "cross-env": "^7.0.3",
+    "concurrently": "^8.2.0",
     "fs-extra": "^11.1.1",
     "inquirer": "^9.2.10",
-    "nodemon": "^3.0.1",
-    "ora": "^5.4.1",
-    "prisma": "^6.8.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1"
   },
   "keywords": [
     "orm",
@@ -92,6 +111,6 @@
     "template",
     "boilerplate"
   ],
-  "author": "Divesh Kumar",
+  "author": "Your Name",
   "license": "MIT"
 }
