@@ -32,6 +32,11 @@
     "knex:migrate": "cd knex && npx knex migrate:latest",
     "knex:seed": "cd knex && npx knex seed:run",
 
+	 "objection": "cross-env PORT=3006 node objection/app.js",
+    "objection:dev": "cross-env PORT=3006 nodemon objection/app.js",
+    "objection:migrate": "cd objection && npx knex migrate:latest",
+    "objection:seed": "cd objection && npx knex seed:run",
+
     "extract": "node scripts/extract-template.js",
     "extract:sequelize": "node scripts/extract-template.js sequelize",
     "extract:mongoose": "node scripts/extract-template.js mongoose",
