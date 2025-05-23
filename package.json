@@ -8,50 +8,51 @@
     "setup": "node scripts/setup.js",
     "test-all": "node scripts/test-all.js",
     "seed-all": "node scripts/seed-all.js",
-    
     "sequelize": "cross-env PORT=3001 node sequelize/app.js",
     "sequelize:dev": "cross-env PORT=3001 nodemon sequelize/app.js",
     "sequelize:migrate": "cd sequelize && npx sequelize-cli db:migrate",
     "sequelize:seed": "cd sequelize && npx sequelize-cli db:seed:all",
-
-	"mongoose": "cross-env PORT=3002 node mongoose/app.js",
+    "mongoose": "cross-env PORT=3002 node mongoose/app.js",
     "mongoose:dev": "cross-env PORT=3002 nodemon mongoose/app.js",
     "mongoose:seed": "node mongoose/seeds/userSeeds.js",
-    
+    "typeorm": "cross-env PORT=3003 ts-node typeorm/src/app.ts",
+    "typeorm:dev": "cross-env PORT=3003 ts-node --watch typeorm/src/app.ts",
+    "typeorm:migrate": "cd typeorm && npx typeorm migration:run",
+    "typeorm:seed": "cd typeorm && ts-node src/seeds/UserSeeder.ts",
     "extract": "node scripts/extract-template.js",
     "extract:sequelize": "node scripts/extract-template.js sequelize",
-	"extract:mongoose": "node scripts/extract-template.js mongoose",
+    "extract:mongoose": "node scripts/extract-template.js mongoose",
     "extract:all": "node scripts/extract-all.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "dotenv": "^16.3.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "helmet": "^7.0.0",
+    "mongoose": "^7.5.0",
     "morgan": "^1.10.0",
-    
-    "sequelize": "^6.32.1",
-    "mysql2": "^3.6.0",
+    "mysql2": "^3.14.1",
     "pg": "^8.11.3",
-    "sqlite3": "^5.1.6",
+    "reflect-metadata": "^0.1.14",
+    "sequelize": "^6.32.1",
     "sequelize-cli": "^6.6.1",
-
-	"mongoose": "^7.5.0"
+    "sqlite3": "^5.1.6",
+    "typeorm": "^0.3.24"
   },
   "devDependencies": {
-    "typescript": "^5.1.6",
-    "@types/node": "^20.5.0",
-    "@types/express": "^4.17.17",
     "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
     "@types/morgan": "^1.9.5",
-    "ts-node": "^10.9.1",
-    "nodemon": "^3.0.1",
-    "cross-env": "^7.0.3",
+    "@types/node": "^20.17.50",
+    "chalk": "^4.1.2",
     "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
     "fs-extra": "^11.1.1",
     "inquirer": "^9.2.10",
-    "chalk": "^4.1.2",
-    "ora": "^5.4.1"
+    "nodemon": "^3.0.1",
+    "ora": "^5.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   },
   "keywords": [
     "orm",
