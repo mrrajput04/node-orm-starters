@@ -1,0 +1,64 @@
+{
+  "name": "orm-starter-templates",
+  "version": "1.0.0",
+  "description": "Complete collection of ORM starter templates with extraction capabilities",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/start-menu.js",
+    "setup": "node scripts/setup.js",
+    "test-all": "node scripts/test-all.js",
+    "seed-all": "node scripts/seed-all.js",
+    
+    "sequelize": "cross-env PORT=3001 node sequelize/app.js",
+    "sequelize:dev": "cross-env PORT=3001 nodemon sequelize/app.js",
+    "sequelize:migrate": "cd sequelize && npx sequelize-cli db:migrate",
+    "sequelize:seed": "cd sequelize && npx sequelize-cli db:seed:all",
+    
+    "extract": "node scripts/extract-template.js",
+    "extract:sequelize": "node scripts/extract-template.js sequelize",
+    "extract:all": "node scripts/extract-all.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0",
+    
+    "sequelize": "^6.32.1",
+    "mysql2": "^3.6.0",
+    "pg": "^8.11.3",
+    "sqlite3": "^5.1.6",
+    "sequelize-cli": "^6.6.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "@types/node": "^20.5.0",
+    "@types/express": "^4.17.17",
+    "@types/cors": "^2.8.13",
+    "@types/morgan": "^1.9.5",
+    "ts-node": "^10.9.1",
+    "nodemon": "^3.0.1",
+    "cross-env": "^7.0.3",
+    "concurrently": "^8.2.0",
+    "fs-extra": "^11.1.1",
+    "inquirer": "^9.2.10",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1"
+  },
+  "keywords": [
+    "orm",
+    "sequelize",
+    "mongoose",
+    "typeorm",
+    "prisma",
+    "knex",
+    "objection",
+    "mikroorm",
+    "starter",
+    "template",
+    "boilerplate"
+  ],
+  "author": "Divesh Kumar",
+  "license": "MIT"
+}
